@@ -1,0 +1,46 @@
+
+.column-wrapper {
+  display:flex;
+  flex-wrap: wrap;
+  margin: 50px -25px;
+}
+.column-wrapper > div {
+  margin: 0 35px;
+}
+.portfolio-box {
+  max-width: 300px;
+}
+.portfolio-box > h3 {
+  margin: 35px 0;
+}
+.portfolio-box > p:last-child {
+  margin-bottom: 0;
+}
+.portfolio-box > a:last-child {
+  margin-bottom: 0;
+}
+.hoverbox {
+  padding: 5px 10px;
+  margin: 0px -10px;
+  transition:.1s;
+}
+.hoverbox:hover {
+  background: rgb(248, 248, 248);
+  padding: 14px 10px;
+  border-radius:7px;
+  transition:.1s;
+}
+@media (max-width:450px){
+  .hoverbox {
+    padding: 5px 10px;
+    margin: 0px -10px;
+    transition:.1s;
+  }
+  .hoverbox:hover {
+    background: rgb(248, 248, 248);
+    padding: 5px 10px;
+    margin: 0px -10px;
+    border-radius:7px;
+    transition:.1s;
+  }
+}

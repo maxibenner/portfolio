@@ -1,0 +1,36 @@
+
+.content-wrapper {
+  position: relative;
+}
+.content-wrapper > img, .content-wrapper > iframe {
+  max-width: 100%;
+  max-height: 800px;
+  margin: 50px auto;
+  display: block;
+}
+.small-text-box {
+  margin: 100px 0 50px 0;
+  max-width: 300px; 
+}
+
+.back-wrapper {
+  max-width: 1300px;
+  position: fixed;
+  width: 100%;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.back-wrapper > a {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  padding: 15px 35px;
+  background: rgb(245, 245, 245);
+  border-radius: 7px;
+  margin-left: 25px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.151);
+}
+.back-wrapper > a:hover {
+  background: rgb(230, 230, 230);
+}

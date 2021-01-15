@@ -1,0 +1,46 @@
+
+/*_______ Fonts __________*/
+/* IBM Plex Sans Regular */
+@font-face { font-family: 'IBMPlexSans'; src: url('./fonts/IBMPlexSans-Regular.ttf'); font-weight: normal; font-style: normal;}
+/* IBM Plex Sans Bold */
+@font-face { font-family: 'IBMPlexSans'; src: url('./fonts/IBMPlexSans-Bold.ttf'); font-weight: bold; font-style: normal;}
+/* Inter Regular */
+@font-face { font-family: 'Inter'; src: url('./fonts/Inter-Regular-slnt=0.ttf'); font-weight: normal; font-style: normal;}
+/* Recoleta Bold */
+@font-face { font-family: 'Recoleta'; src: url('./fonts/Recoleta-bold.ttf'); font-weight: bold; font-style: normal;}
+
+html {
+  font-size: 14px;
+  font-family: IBMPlexSans;
+}
+body {
+  position: relative;
+  max-width:1200px;
+  margin: 50px auto;
+  padding: 0 25px;
+}
+a {
+  display:block;
+  text-decoration: none;
+  color:black;
+  margin:14px 0;
+}
+h3 {
+  font-weight:normal;
+  font-size:1em;
+}
+nav {
+  font-weight:bold;
+  font-size: 1.5em;
+}
+
+.embedded-video-16-9 {
+  width:  100%;
+  height: 50.625vw; /* 90*9/16 */
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+
+
+
