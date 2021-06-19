@@ -2,7 +2,7 @@
 
 [![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fmaxibenner%2Ffotura)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fmaxibenner%2Fportfolio)
 
-This is my personal portfolio. I've originally built it within one day using vanilla javascript. Kind of felt like going back to analog photography after using digital.
+This is my personal portfolio. I've originally built it within one day using only html and css. Kind of felt like going back to analog photography after using digital.
 
 
 [Live portfolio](https://www.maximilianbenner.com)
