@@ -1,6 +1,7 @@
 html {
     font-size: 14px;
 }
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
         Helvetica Neue, Ubuntu, sans-serif;
@@ -10,20 +11,20 @@ body {
     margin: 50px auto;
     padding: 0 25px;
 }
+
+p,
 a {
-    display: block;
-    text-decoration: none;
-    color: black;
-}
-p {
-    color: rgb(94, 94, 94);
+    /* color: rgb(36, 36, 36); */
     margin: 0;
     margin-bottom: 8px;
 }
+
 h3 {
-    font-weight: normal;
+    font-weight: 500;
     font-size: 1em;
+    margin-bottom: 24px;
 }
+
 nav {
     font-weight: bold;
     font-size: 1.5em;
@@ -31,7 +32,7 @@ nav {
 
 .embedded-video-16-9 {
     width: 100%;
-    height: 50.625vw; /* 90*9/16 */
+    height: 50.625vw;
     margin-left: 5vw;
     margin-right: 5vw;
 }

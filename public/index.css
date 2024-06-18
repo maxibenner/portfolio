@@ -1,22 +1,15 @@
 .column-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 50px -25px;
-}
+    display: grid;
+    gap: 48px;
+    margin-top: 48px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
-.column-wrapper>div {
-    margin: 0 35px;
 }
 
 .portfolio-box {
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    max-width: 300px;
-}
-
-.portfolio-box>h3 {
-    margin: 35px 0;
+    border-radius: 12px;
 }
 
 .portfolio-box>p:last-child {
@@ -32,12 +25,4 @@
     margin: 0px -10px;
     border-radius: 7px;
     transition: background-color .4s;
-}
-
-/* Media query to limit hover effects to devices that support it, so no phones and tablets */
-@media (hover: hover) {
-    .hoverbox:hover {
-        background: rgb(238, 238, 238);
-        transition: background-color 0s;
-    }
 }
