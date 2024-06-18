@@ -14,10 +14,11 @@ a {
     display: block;
     text-decoration: none;
     color: black;
-    margin: 14px 0;
 }
 p {
     color: rgb(94, 94, 94);
+    margin: 0;
+    margin-bottom: 8px;
 }
 h3 {
     font-weight: normal;
