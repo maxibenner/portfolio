@@ -36,3 +36,28 @@ nav {
     margin-left: 5vw;
     margin-right: 5vw;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form * {
+    box-sizing: border-box;
+}
+
+form>input,
+form>textarea {
+    margin-bottom: 12px;
+    border: 1px solid rgb(226, 226, 226);
+    font-size: 16px;
+    padding: 6px;
+}
+
+form>button {
+    padding: 6px;
+}
+
+form>label {
+    margin-bottom: 6px;
+}

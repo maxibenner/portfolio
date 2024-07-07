@@ -12,7 +12,7 @@
   <body>
     <nav>Maximilian Benner</nav>
     <p style="max-width: 300px; margin-top: 12px">
-      Founder of Give a Meal, occasional documentary photographer, engineering lead at L+R
+      Occasional documentary photographer, engineering lead at L+R
     </p>
 
     <!--Info Wrapper-->
@@ -20,7 +20,7 @@
       <div class="portfolio-box">
         <h3>PROJECTS</h3>
         <a class="hoverbox" href="https://www.give-a-meal.org" target="_blank"
-          >Give a Meal, Food sharing platform<br />2021-present</a
+          >Give a Meal, Food sharing platform<br />2021-2024</a
         >
         <a class="hoverbox" href="./projects/snarc.html"
           >SNARC, Visual Research<br />2018-2019</a
@@ -97,7 +97,7 @@
       <div class="portfolio-box">
         <h3>WORK EXPERIENCE</h3>
         <p>Engineering Lead, L+R<br />2022-present</p>
-        <p>Founder, Give a Meal<br />2019-present</p>
+        <p>Founder, Fotura<br />2019-present</p>
         <p>Photographer, Freelance<br />2017-present</p>
         <p>
           Teaching Assistant, International Center of Photography<br />2018-2019
@@ -109,18 +109,49 @@
       </div>
       <div class="portfolio-box">
         <h3>CONTACT</h3>
-        <p>
+        <!-- <p>
           Please get in touch via e-mail for inquiries, requests or
           questions:<br /><b
             ><a class="hoverbox" href="mailto:benner@fotura.co"
               >benner@fotura.co</a
             ></b
           >
-        </p>
-        <p>
+        </p> -->
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value="1ebf55f2-8c75-40d2-a897-58be7a7f96eb"
+          />
+
+          <label for="form-input-name">Name</label>
+          <input id="form-input-name" type="text" name="name" required />
+          <label for="form-input-email">E-Mail</label>
+          <input id="form-input-email" type="email" name="email" required />
+          <label for="form-input-message">Message</label>
+          <textarea id="form-input-message" name="message" required></textarea>
+
+          <!-- Honeypot Spam Protection -->
+          <input
+            type="checkbox"
+            name="botcheck"
+            class="hidden"
+            style="display: none"
+          />
+
+          <!-- Custom Confirmation / Success Page -->
+          <input
+            type="hidden"
+            name="redirect"
+            value="http://127.0.0.1:5500/public/success.html"
+          />
+
+          <button type="submit">Submit Message</button>
+        </form>
+        <!-- <p>
           Fotura, Inc.<br />9450 SW Gemini Dr, PMB 22517<br />Beaverton, Oregon
           97008, US
-        </p>
+        </p> -->
       </div>
       <div class="portfolio-box">
         <h3>SOCIAL</h3>
