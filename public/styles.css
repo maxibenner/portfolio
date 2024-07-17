@@ -57,13 +57,6 @@ form>textarea {
     padding: 6px;
 }
 
-form>button {
-    padding: 8px 24px;
-    background-color: black;
-    color: white;
-    border: none;
-}
-
 form>label {
     margin-bottom: 6px;
 }
