@@ -44,7 +44,8 @@ form {
 
 form * {
     box-sizing: border-box;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 14px;
 }
 
 form>input,
@@ -57,7 +58,7 @@ form>textarea {
 }
 
 form>button {
-    padding: 12px 24px;
+    padding: 8px 24px;
     background-color: black;
     color: white;
     border: none;
