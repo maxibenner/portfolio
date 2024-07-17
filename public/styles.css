@@ -14,9 +14,9 @@ body {
 
 p,
 a {
-    /* color: rgb(36, 36, 36); */
     margin: 0;
     margin-bottom: 8px;
+    width: fit-content;
 }
 
 h3 {
