@@ -109,11 +109,16 @@
       </div> -->
       <div class="portfolio-box">
         <h3>CONTACT</h3>
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form action="https://www.simplecontactform.org/submit" method="POST">
           <input
             type="hidden"
             name="access_key"
-            value="1ebf55f2-8c75-40d2-a897-58be7a7f96eb"
+            value="66b9267fe154981ba019a9e8"
+          />
+          <input
+            value="https://maximilianbenner.com/success.html"
+            type="hidden"
+            name="redirect"
           />
 
           <label for="form-input-name">Name</label>
@@ -123,20 +128,7 @@
           <label for="form-input-message">Message</label>
           <textarea id="form-input-message" name="message" required></textarea>
 
-          <!-- Honeypot Spam Protection -->
-          <input
-            type="checkbox"
-            name="botcheck"
-            class="hidden"
-            style="display: none"
-          />
-
-          <!-- Custom Confirmation / Success Page -->
-          <input
-            type="hidden"
-            name="redirect"
-            value="https://maximilianbenner.com/success.html"
-          />
+          <input type="hidden" name="are_you_human" />
 
           <button type="submit">Submit</button>
         </form>
