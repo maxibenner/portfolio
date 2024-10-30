@@ -1,21 +1,27 @@
-/**
- * Gets all links on a page, adds mouseover listeners and triggers a page preload on hover
- */
+// Track preloaded pages
+const preloadedPages = new Array();
 
+// Get all links on the page
 const links = document.querySelectorAll("a");
+
+// Add hover event listener to each link
 links.forEach((link) => {
   link.addEventListener("mouseover", (event) => {
     event.preventDefault();
-    preloadPage(link.href);
+
+    // Preload the url
+    preload(link.href);
   });
 });
 
-function preloadPage(url) {
-  fetch(url, { method: "GET", mode: "no-cors" })
-    .then((response) => {
-      console.log(`Preloaded: ${url}`);
-    })
-    .catch((error) => {
-      console.error(`Failed to preload: ${url}`, error);
-    });
+async function preload(url) {
+  // Only preload if the page hasn't been preloaded yet
+  if (!preloadedPages.includes(url)) {
+    // Fetch the page
+    await fetch(url, { method: "GET", mode: "no-cors" });
+
+    // Push to tracking array
+    preloadedPages.push(url);
+    console.log(`Preloaded: ${url}`);
+  }
 }
