@@ -43,7 +43,6 @@ async function preload(url) {
         "/public/",
         `/public/${collectionSlug}/`
       );
-
       imgElement.src = imgSrcNew;
     });
 
