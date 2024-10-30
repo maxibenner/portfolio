@@ -1,39 +1,54 @@
-// // Track preloaded pages
-// const preloadedPages = new Array();
+// Track preloaded pages
+const preloadedPages = new Array();
 
-// // Get all links on the page
-// const links = document.querySelectorAll("a");
+// Get all links on the page
+const links = document.querySelectorAll("a");
 
-// // Add hover event listener to each link
-// links.forEach((link) => {
-//   // Desktop
-//   link.addEventListener("mouseover", (event) => {
-//     event.preventDefault();
-//     preload(link.href);
-//   });
-//   // Mobile
-//   link.addEventListener("touchstart", (event) => {
-//     event.preventDefault();
-//     preload(link.href);
-//   });
-// });
+// Add hover event listener to each link
+links.forEach((link) => {
+  // Desktop
+  link.addEventListener("mouseover", (event) => {
+    event.preventDefault();
+    preload(link.href);
+  });
+  // Mobile
+  link.addEventListener("touchstart", (event) => {
+    event.preventDefault();
+    preload(link.href);
+  });
+});
 
-// async function preload(url) {
-//   // Only preload if the page hasn't been preloaded yet
-//   if (!preloadedPages.includes(url)) {
-//     // Push to tracking array
-//     preloadedPages.push(url);
+async function preload(url) {
+  // Only preload if the page hasn't been preloaded yet
+  if (!preloadedPages.includes(url)) {
+    // Remove last segment and host to get collection slug
+    const collectionSlug = url.split("/").slice(-2, -1)[0];
 
-//     // Fetch the page
-//     const res = await fetch(url, { method: "GET", mode: "no-cors" });
-//     const data = await res.text();
+    // Push to tracking array
+    preloadedPages.push(url);
 
-//     // Extract the body from the response
-//     const bodyNew = data.match(/<body[^>]*>([\s\S]*?)<\/body>/i)[1];
+    // Fetch the page
+    const res = await fetch(url, { method: "GET", mode: "no-cors" });
+    const doc = await res.text();
 
-//     // Replace current body with the new one
-//     document.body.innerHTML = bodyNew;
+    // Get all img tags in the fetched page
+    const parser = new DOMParser();
+    const htmlDoc = parser.parseFromString(doc, "text/html");
+    const images = htmlDoc.querySelectorAll("img");
 
-//     console.log(`Preloaded: ${url}`);
-//   }
-// }
+    // Preload images
+    images.forEach((img) => {
+      const imgElement = new Image();
+
+      // Inject collection slug after public and before the image path
+      const imgSrcNew = img.src.replace(
+        "/public/",
+        `/public/${collectionSlug}/`
+      );
+
+      imgElement.src = imgSrcNew;
+    });
+
+    console.log(`Preloaded: ${url}`);
+  }
+}
