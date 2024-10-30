@@ -1,28 +1,27 @@
 .column-wrapper {
-    display: grid;
-    gap: 48px;
-    margin-top: 48px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-
+  display: grid;
+  gap: 48px;
+  margin-top: 48px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .portfolio-box {
-    display: flex;
-    flex-direction: column;
-    border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
 }
 
-.portfolio-box>p:last-child {
-    margin-bottom: 0;
+.portfolio-box > p:last-child {
+  margin-bottom: 0;
 }
 
-.portfolio-box>a:last-child {
-    margin-bottom: 0;
+.portfolio-box > a:last-child {
+  margin-bottom: 0;
 }
 
 .hoverbox {
-    padding: 5px 10px;
-    margin: 0px -10px;
-    border-radius: 7px;
-    transition: background-color .4s;
+  padding: 5px 10px;
+  margin: 0px -10px;
+  border-radius: 7px;
+  transition: background-color 0.4s;
 }
