@@ -8,12 +8,10 @@ const links = document.querySelectorAll("a");
 links.forEach((link) => {
   // Desktop
   link.addEventListener("mouseover", (event) => {
-    event.preventDefault();
     preload(link.href);
   });
   // Mobile
   link.addEventListener("touchstart", (event) => {
-    event.preventDefault();
     preload(link.href);
   });
 });
@@ -28,7 +26,7 @@ async function preload(url) {
     preloadedPages.push(url);
 
     // Fetch the page
-    const res = await fetch(url, { method: "GET", mode: "no-cors" });
+    const res = await fetch(url /*, { method: "GET", mode: "no-cors" }*/);
     const doc = await res.text();
 
     // Get all img tags in the fetched page
